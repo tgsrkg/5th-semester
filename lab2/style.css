@@ -61,3 +61,7 @@ ul>a:active {
     max-width: 175px;
 }
 
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
