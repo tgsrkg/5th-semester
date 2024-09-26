@@ -23,14 +23,14 @@ function updateStack() {
 // Добавление элемента в стек
 pushBtn.addEventListener('click', () => {
     const newItem = stack.length + 1; // Элемент для добавления (число)
-    stack.unshift(newItem); // Добавить элемент в начало массива 
+    stack.push(newItem); // Добавить элемент в конец массива (верх стека)
     updateStack(); // Обновить визуализацию
 });
 
 // Извлечение элемента из стека
 popBtn.addEventListener('click', () => {
     if (stack.length > 0) {
-        stack.pop(); // Удалить последний элемент из массива 
+        stack.pop(); // Удалить последний элемент из массива (верх стека)
         updateStack(); // Обновить визуализацию
     } else {
         alert('Стек пуст!');

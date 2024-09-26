@@ -20,17 +20,17 @@ function updateQueue() {
     });
 }
 
-// Добавление элемента в очередь
+// Добавление элемента в очередь (новые элементы сверху)
 enqueueBtn.addEventListener('click', () => {
     const newItem = queue.length + 1; // Элемент для добавления
-    queue.push(newItem); // Добавить элемент в очередь
+    queue.unshift(newItem); // Добавить элемент в начало очереди
     updateQueue(); // Обновить визуализацию
 });
 
-// Извлечение элемента из очереди
+// Извлечение элемента из очереди (смещаем первый элемент вниз)
 dequeueBtn.addEventListener('click', () => {
     if (queue.length > 0) {
-        queue.shift(); // Удалить первый элемент из очереди
+        queue.pop(); // Удалить последний элемент из очереди (нижний)
         updateQueue(); // Обновить визуализацию
     } else {
         alert('Очередь пуста!');
