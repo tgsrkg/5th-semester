@@ -1,0 +1,38 @@
+// Очередь как массив
+let queue = [];
+
+// Ссылки на элементы
+const queueContainer = document.getElementById('queue-container');
+const enqueueBtn = document.getElementById('enqueueBtn');
+const dequeueBtn = document.getElementById('dequeueBtn');
+
+// Функция для обновления визуализации очереди
+function updateQueue() {
+    // Очистить контейнер перед обновлением
+    queueContainer.innerHTML = '';
+
+    // Добавить каждый элемент очереди как div
+    queue.forEach((item, index) => {
+        const queueItem = document.createElement('div');
+        queueItem.classList.add('queue-item');
+        queueItem.innerText = item;
+        queueContainer.appendChild(queueItem);
+    });
+}
+
+// Добавление элемента в очередь 
+enqueueBtn.addEventListener('click', () => {
+    const newItem = queue.length + 1; // Элемент для добавления
+    queue.unshift(newItem); // Добавить элемент в начало очереди
+    updateQueue(); // Обновить визуализацию
+});
+
+// Извлечение элемента из очереди (смещаем первый элемент вниз)
+dequeueBtn.addEventListener('click', () => {
+    if (queue.length > 0) {
+        queue.pop(); // Удалить последний элемент из очереди (нижний)
+        updateQueue(); // Обновить визуализацию
+    } else {
+        alert('Очередь пуста!');
+    }
+});
