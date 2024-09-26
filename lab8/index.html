@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title>Справочник организации</title>
+</head>
+<body>
+  <h1>Справочник организации</h1>
+
+  <input type="text" id="search" placeholder="Введите ФИО сотрудника">
+
+  <div id="results"></div>
+
+  <ul id="org-tree">
+    <li>
+      <ul class="hidden">
+        <li>
+          Отдел ML
+          <ul class="hidden">
+            <li class="employee" data-name="Лещёв Дмитрий Евгеньевич">Лщёв Дмитрий Евгеньевич</li>
+            <li class="employee" data-name="Григор Александр Антонович">Григор Александр Антонович</li>
+          </ul>
+        </li>
+        <li>
+          Отдел web-разработки
+          <ul class="hidden">
+            <li class="employee" data-name="Ниятшин Эмиль Тимурович">Ниятшин Эмиль Тимурович</li>
+            <li class="employee" data-name="Шохин Егор Павлович">Шохин Егор Павлович</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

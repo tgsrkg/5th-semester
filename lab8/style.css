@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  #search {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  #results {
+    border: 1px solid #ccc;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .result-item {
+    padding: 5px;
+    cursor: pointer;
+  }
+  .result-item:hover {
+    background-color: #f0f0f0;
+  }
+  .highlight {
+    color:brown;
+    font-size: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  .hidden {
+    display: none;
+  }
+  .toggle {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    margin-right: 5px;
+  }
